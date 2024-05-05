@@ -6,9 +6,9 @@ import warnings
 right = 0
 wrong = 0
 no_sentiment = 0
-end = 1000
+end = 4
 start = 0
-help_n = 1
+help_n = 2
 imdb_data=pd.read_csv('IMDB Dataset.csv')
 
 answers = end - start
@@ -29,15 +29,18 @@ model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-xl", device_m
 
 dataframe = pd.DataFrame(columns=['review', 'sentiment'])
 
-help_list = []
 
 for i, x in enumerate(testX):
     prompt = ""
 
+    help_list = []
+
     for j in range(help_n):
         help_list.append(help.sample(n=1).reset_index(drop=True))
-        prompt = prompt + help_list[j].review[0] + " Sentiment: " + help_list[j].sentiment[0] + ".\n"
-    prompt = prompt + x + " Sentiment: "
+        prompt = prompt + help_list[j].review[0] + " Sentiment: " + help_list[j].sentiment[0] + ".\n\n"
+        print(len(help_list))
+    prompt = prompt + x + " Sentiment: \n\n\n"
+    print(prompt)
         
 
     input_ids = tokenizer(prompt, return_tensors="pt", padding=True, truncation=True).input_ids.to("cuda")
@@ -58,7 +61,7 @@ for i, x in enumerate(testX):
         right += 1
     elif((testY[i] == "positive" and result.endswith("negative")) or (testY[i] == "negative" and result.endswith("positive"))):
         print(i, end=": WRONG\n")
-        print(result)
+        print("Correct: " + testY[i] + "Wrong: " + result)
         wrong += 1
     else:
         print(i, end=": NO_SENTIMENT\n")
@@ -79,5 +82,3 @@ print("No sentiment percent:", no_sentiment_percent, end="%\n")
 print("Right:", right)
 print("Wrong:", wrong)
 print("No sentiment: ", no_sentiment)
-
-
