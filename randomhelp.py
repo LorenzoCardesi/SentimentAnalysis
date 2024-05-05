@@ -38,10 +38,7 @@ for i, x in enumerate(testX):
     for j in range(help_n):
         help_list.append(help.sample(n=1).reset_index(drop=True))
         prompt = prompt + help_list[j].review[0] + " Sentiment: " + help_list[j].sentiment[0] + ".\n\n"
-        print(len(help_list))
-    prompt = prompt + x + " Sentiment: \n\n\n"
-    print(prompt)
-        
+    prompt = prompt + x + " Sentiment: \n\n\n"        
 
     input_ids = tokenizer(prompt, return_tensors="pt", padding=True, truncation=True).input_ids.to("cuda")
 
