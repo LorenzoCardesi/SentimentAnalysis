@@ -6,9 +6,9 @@ import warnings
 right = 0
 wrong = 0
 no_sentiment = 0
-end = 4
+end = 1000
 start = 0
-help_n = 2
+help_n = 1
 imdb_data=pd.read_csv('IMDB Dataset.csv')
 
 answers = end - start
@@ -37,8 +37,9 @@ for i, x in enumerate(testX):
 
     for j in range(help_n):
         help_list.append(help.sample(n=1).reset_index(drop=True))
-        prompt = prompt + help_list[j].review[0] + " Sentiment: " + help_list[j].sentiment[0] + ".\n\n"
-    prompt = prompt + x + " Sentiment: \n\n\n"        
+        prompt = prompt + help_list[j].review[0] + " Sentiment: " + help_list[j].sentiment[0] + "\n"
+    prompt = prompt + x + " Sentiment: "
+        
 
     input_ids = tokenizer(prompt, return_tensors="pt", padding=True, truncation=True).input_ids.to("cuda")
 
