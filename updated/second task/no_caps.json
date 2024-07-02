@@ -1,0 +1,17 @@
+{
+    "0": {
+        "correct": 0.958,
+        "no_sentiment": 0.01,
+        "wrong": 0.032
+    },
+    "1": {
+        "correct": 0.972,
+        "no_sentiment": 0.0,
+        "wrong": 0.028
+    },
+    "2": {
+        "correct": 0.974,
+        "no_sentiment": 0.0,
+        "wrong": 0.026
+    }
+}
