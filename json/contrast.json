@@ -1,0 +1,90 @@
+{
+    "0": {
+        "contrast": {
+            "correct": 0.9549180327868853,
+            "no_sentiment": 0.00819672131147541,
+            "wrong": 0.036885245901639344
+        },
+        "contrast_system": {
+            "correct": 0.9569672131147541,
+            "no_sentiment": 0.0,
+            "wrong": 0.0430327868852459
+        },
+        "original": {
+            "correct": 0.9549180327868853,
+            "no_sentiment": 0.00819672131147541,
+            "wrong": 0.036885245901639344
+        },
+        "original_system": {
+            "correct": 0.9569672131147541,
+            "no_sentiment": 0.0,
+            "wrong": 0.0430327868852459
+        }
+    },
+    "1": {
+        "contrast": {
+            "correct": 0.9610655737704918,
+            "no_sentiment": 0.0,
+            "wrong": 0.0389344262295082
+        },
+        "contrast_system": {
+            "correct": 0.9610655737704918,
+            "no_sentiment": 0.0,
+            "wrong": 0.0389344262295082
+        },
+        "original": {
+            "correct": 0.9590163934426229,
+            "no_sentiment": 0.0,
+            "wrong": 0.040983606557377046
+        },
+        "original_system": {
+            "correct": 0.9569672131147541,
+            "no_sentiment": 0.0,
+            "wrong": 0.0430327868852459
+        }
+    },
+    "2": {
+        "contrast": {
+            "correct": 0.9651639344262295,
+            "no_sentiment": 0.0,
+            "wrong": 0.03483606557377049
+        },
+        "contrast_system": {
+            "correct": 0.9631147540983607,
+            "no_sentiment": 0.0,
+            "wrong": 0.036885245901639344
+        },
+        "original": {
+            "correct": 0.9610655737704918,
+            "no_sentiment": 0.0,
+            "wrong": 0.0389344262295082
+        },
+        "original_system": {
+            "correct": 0.9651639344262295,
+            "no_sentiment": 0.0,
+            "wrong": 0.03483606557377049
+        }
+    },
+    "3": {
+        "contrast": {
+            "correct": 0.9610655737704918,
+            "no_sentiment": 0.0,
+            "wrong": 0.0389344262295082
+        },
+        "contrast_system": {
+            "correct": 0.9610655737704918,
+            "no_sentiment": 0.0,
+            "wrong": 0.0389344262295082
+        },
+        "original": {
+            "correct": 0.9631147540983607,
+            "no_sentiment": 0.0,
+            "wrong": 0.036885245901639344
+        },
+        "original_system": {
+            "correct": 0.9590163934426229,
+            "no_sentiment": 0.0,
+            "wrong": 0.040983606557377046
+        }
+    }
+}
